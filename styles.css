@@ -363,7 +363,8 @@ address a:hover {
     text-align: left;
   }
 
-  .section-heading {
+  .section-heading,
+  .split .section-heading {
     position: static;
   }
 
@@ -390,6 +391,42 @@ address a:hover {
   .timeline-item {
     grid-template-columns: 1fr;
     gap: 8px;
+  }
+
+  .split,
+  #skills {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .section-heading {
+    min-width: 0;
+  }
+
+  .section-heading .eyebrow {
+    margin: 0 0 10px;
+    font-size: 0.68rem;
+    line-height: 1;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+
+  .section-heading h2 {
+    font-size: clamp(2.4rem, 14vw, 4.8rem);
+    line-height: 0.9;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+
+  .timeline,
+  .education-grid,
+  .tag-groups {
+    min-width: 0;
+  }
+
+  .tag-groups {
+    margin-top: 0;
   }
 }
 
